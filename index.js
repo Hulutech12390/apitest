@@ -34,6 +34,9 @@ app.post("/login", async (req, resp) => {
         resp.send("no user found")
     }
     
-})
+});
+app.get("/logs", (res, reqs) => {
+    reqs.send("yesss")
+});
 
 app.listen(port, () => console.log(`listen ${port}`));
