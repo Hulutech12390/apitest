@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 
+const port = process.env.PORT || 5000;
 
 require("./db/config");
 const user = require('./db/user');
@@ -35,4 +36,4 @@ app.post("/login", async (req, resp) => {
     
 })
 
-app.listen(5000);
+app.listen(port, () => console.log(`listen ${port}`));
